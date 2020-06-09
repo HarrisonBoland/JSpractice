@@ -1,0 +1,1 @@
+To store all my JavaScript Practice code
