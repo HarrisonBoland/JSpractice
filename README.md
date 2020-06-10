@@ -1,1 +1,1 @@
-To store all my JavaScript Practice code
+Practice Application in JS udemy course
