@@ -1,1 +1,1 @@
-Practice Application in JS udemy course
+Practice Application in JS udemy course.
