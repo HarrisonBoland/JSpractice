@@ -1,1 +1,1 @@
-Practice Application in JS udemy course.
+To store JS files that I use to practice for future reference.
