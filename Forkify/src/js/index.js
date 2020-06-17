@@ -1,6 +1,6 @@
 import Search from './modals/Search';
 import * as searchView from './views/searchView';
-import { elements } from './views/base';
+import { elements, renderLoader, clearLoader } from './views/base';
 // const res = await axios(`https://forkify-api.herokuapp.com/api/search?&q=${this.query}`);
 // const res = await axios(`https://forkify-api.herokuapp.com/api/get?rId=${this.id}`);
 
@@ -23,11 +23,13 @@ const controlSearch = async () => {
         // 3. Prepare UI from results
         searchView.clearInput();
         searchView.clearResults();
+        renderLoader(elements.searchRes);
 
         // 4. Search for recipers
         await state.search.getResults();
 
         // 5. Render results on UI
+        clearLoader();
         searchView.renderResults(state.search.result)
     };
 };
