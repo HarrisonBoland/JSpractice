@@ -9,7 +9,16 @@ export const clearInput = () => {
 export const clearResults = () => {
     elements.searchResList.innerHTML = '';
     elements.searchResPages.innerHTML = '';
-}
+};
+
+export const highlightSelected = id => {
+    const results = Array.from(document.querySelectorAll('.results__link'));
+    results.forEach(el => {
+        el.classList.remove('.result__link--active');
+    });
+
+    document.querySelector(`a[href="#${id}"]`).classList.add('result__link--active');
+};
 
 const limitRecipeTitle = (title, limit = 17) => {
     const newTitle = [];
