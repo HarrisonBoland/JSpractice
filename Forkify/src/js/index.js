@@ -15,7 +15,6 @@ import { elements, renderLoader, clearLoader } from './views/base';
     - Liked recipes
 */
 const state = {};
-window.state = state;
 
 
 // SEARCH CONTROLLER
@@ -150,7 +149,6 @@ const controlLike = () => {
         likesView.toggleLikeBtn(true);
             
         // Add like to UI
-        console.log(state.recipe.publisher)
         likesView.renderLike(newLike);
 
     // User has liked the current recipe
@@ -201,5 +199,3 @@ elements.recipe.addEventListener('click', e => {
         controlLike();
     };
 });
-
-window.l = new List();
