@@ -145,13 +145,14 @@ const controlLike = () => {
         const newLike = state.likes.addLike(
             currentId,
             state.recipe.title,
-            state.recipe.author,
+            state.recipe.publisher,
             state.recipe.img
         )
         // Toggle the like button
         likesView.toggleLikeBtn(true);
             
         // Add like to UI
+        console.log(state.recipe.publisher)
         likesView.renderLike(newLike);
 
     // User has liked the current recipe
