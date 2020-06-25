@@ -78,41 +78,97 @@
 
 
 
-function sortArray(array) {
-    // Split array into odd numbers and save positions of even numbers
-    pos = [];
-    neg = [];
-    res = [];
+// function sortArray(array) {
+//     // Split array into odd numbers and save positions of even numbers
+//     pos = [];
+//     neg = [];
+//     res = [];
 
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] % 2 === 0) {
-            pos.push(i);
-        } else {
-            neg.push(array[i]);
-        };
-    };
+//     for (let i = 0; i < array.length; i++) {
+//         if (array[i] % 2 === 0) {
+//             pos.push(i);
+//         } else {
+//             neg.push(array[i]);
+//         };
+//     };
     
-    // Sort negative array accending
-    neg.sort((a,b)=>a-b);
+//     // Sort negative array accending
+//     neg.sort((a,b)=>a-b);
 
-    // Combine arrays into result
-    let count = 0;
-    for (let i = 0; i < array.length; i++) {
-        if (i === pos[count]) {
-            res.push(array[pos[count]]);
-            count ++;
-        } else {
-            res.push(neg[0]);
-            neg.shift();
-        };
-    };
+//     // Combine arrays into result
+//     let count = 0;
+//     for (let i = 0; i < array.length; i++) {
+//         if (i === pos[count]) {
+//             res.push(array[pos[count]]);
+//             count ++;
+//         } else {
+//             res.push(neg[0]);
+//             neg.shift();
+//         };
+//     };
 
-    return res;
-};
+//     return res;
+// };
 
-console.log(sortArray([5, 3, 2, 8, 1, 4]));
-
-
+// console.log(sortArray([5, 3, 2, 8, 1, 4]));
 
 
 
+// COULDN"T DO
+// function zero() {}
+// function one() {}
+// function two() {}
+// function three() {}
+// function four() {}
+// function five() {}
+// function six() {}
+// function seven() {}
+// function eight() {}
+// function nine() {}
+
+// function plus() {}
+// function minus() {}
+// function times() {}
+// function dividedBy() {}
+
+
+
+
+// function toWeirdCase(string){
+//     newString = ''
+
+//     i = 0
+//     string.split('').forEach((el) => {
+//         if (el === ' ') {
+//             newString += el
+//             i = 0
+//         } else if (i % 2 === 0) {
+//             newString += el.toUpperCase();
+//             i ++
+//         } else {
+//             newString += el.toLowerCase();
+//             i ++
+//         };
+//     });
+
+//     return newString;
+// }
+
+// console.log(toWeirdCase('hi Man how is it going'));
+
+
+
+// function wave(str) {
+//     arr = [];
+//     for (let i = 0; i < str.length; i++) {
+//         if (str[i] === ' ') {
+//             continue
+//         } else {
+//             stringArr = str.substring(0, i) + str[i].toUpperCase() + str.substring(i + 1)
+//             arr.push(stringArr);
+//         }
+//     };
+//     return arr;
+// }
+
+// console.log(wave('hello buddy'))
