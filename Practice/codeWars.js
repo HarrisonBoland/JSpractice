@@ -172,3 +172,42 @@
 // }
 
 // console.log(wave('hello buddy'))
+
+
+
+// function pigIt(str){
+//     strArr = str.split(' ');
+//     pigItStr = ''
+//     for (let index = 0; index < strArr.length; index++) {
+//         el = strArr[index];
+//         console.log(el)
+//         pigItStr += el.substr(1);
+//         pigItStr += el[0];
+//         if (el !== '!' && el !== '?') {
+//             pigItStr += 'ay';
+//         };
+//         if (index < strArr.length - 1) {
+//             pigItStr += ' ';
+//         };
+//     };
+//     return(pigItStr);
+// }
+
+// console.log(pigIt('Hello World ?'));
+
+
+
+var moveZeros = function (arr) {
+    let newArr = [];
+    for (let i = arr.length - 1; i >= 0; i--) {
+        el = arr[i];
+        if (el === 0) {
+            newArr.push(el);
+        } else {
+            newArr.unshift(el);
+        };
+    };
+    return newArr;
+}
+
+console.log(moveZeros([false,1,0,1,2,0,1,3,"a"]));
