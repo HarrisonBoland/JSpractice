@@ -197,17 +197,41 @@
 
 
 
-var moveZeros = function (arr) {
-    let newArr = [];
-    for (let i = arr.length - 1; i >= 0; i--) {
-        el = arr[i];
-        if (el === 0) {
-            newArr.push(el);
-        } else {
-            newArr.unshift(el);
-        };
-    };
-    return newArr;
-}
+// var moveZeros = function (arr) {
+//     let newArr = [];
+//     for (let i = arr.length - 1; i >= 0; i--) {
+//         el = arr[i];
+//         if (el === 0) {
+//             newArr.push(el);
+//         } else {
+//             newArr.unshift(el);
+//         };
+//     };
+//     return newArr;
+// }
 
-console.log(moveZeros([false,1,0,1,2,0,1,3,"a"]));
+// console.log(moveZeros([false,1,0,1,2,0,1,3,"a"]));
+
+
+
+// function generateHashtag (str) {
+//     const strArr = str.split(' ');
+//     let newStr = '#';
+//     for (let i = 0; i < strArr.length; i++) {
+//         if (strArr[i] === '') {
+//             continue;
+//         } else {
+//             newStr += strArr[i].substr(0, 1).toUpperCase();
+//             newStr += strArr[i].substr(1);
+//         };
+//     };
+//     if (newStr.length <= 1) {
+//         return false;
+//     } else if (newStr.length > 140) {
+//         return false;
+//     } else {
+//         return newStr;
+//     };
+// }
+
+// console.log(generateHashtag(''))
