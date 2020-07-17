@@ -235,3 +235,48 @@
 // }
 
 // console.log(generateHashtag(''))
+
+
+
+// function humanReadable(seconds) {
+//     let time = ['00','00','00'];
+//     time[2] = seconds % 60;
+//     time[1] = Math.floor((seconds / 60) % 60);
+//     time[0] = Math.floor(seconds / 60 / 60);
+//     for (let i = 0; i < time.length; i++) {
+//         if (time[i] < 10) {
+//             time[i] = '0' + time[i];
+//         };
+//     };
+//     return time.join(':');
+//   }
+
+//   console.log(humanReadable(86349))
+
+
+
+// function josephus(items, k){
+//     k -= 1
+//     let count = k
+//     let newArr = [];
+//     while (items.length > 0) {
+//         if (items.length === 1) {
+//             newArr.push(items[0]);
+//             return newArr;
+//         }
+//         newArr.push(items[count]);
+//         items.splice(count, 1);
+//         console.log(items.length, count);
+//         for (let i = 0; i < k; i++) {
+//             if (count === items.length) {
+//                 count = 1;
+//             } else {
+//                 count++
+//             }
+//         }
+        
+//         console.log(items , count, items[count]);
+//     };
+//   }
+
+  console.log(josephus([1,2,3,4,5,6,7,8,9,10],2));
