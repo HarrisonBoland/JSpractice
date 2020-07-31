@@ -280,3 +280,40 @@
 //   }
 
 // console.log(josephus([1,2,3,4,5,6,7,8,9,10],2));
+
+
+
+// function loop_size(node){
+//     // LEARN HOW TO WRITE A LINKED LIST
+// }
+
+// console.log(loop_size())
+
+
+
+function rgb(r, g, b){
+    const decArr = [r, g, b];
+    const hex = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
+    let hexArr = [];
+    for(let i = 0; i < decArr.length; i++) {
+        let hexValue, dec, remainder, divisor;
+        dec = decArr[i];
+        
+        if (dec < 0) {
+            dec = 0;
+        } else if (dec > 255) {
+            dec = 255;
+        };
+
+        divisor = Math.floor(dec / 16);
+        remainder = Math.floor(dec % 16);
+
+        hexValue = hex[divisor] + hex[remainder];
+
+        hexArr.push(hexValue);
+    };
+
+    return hexArr.join('');
+}
+
+console.log(rgb(-20, 0, 330));
