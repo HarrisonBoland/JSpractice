@@ -1,1 +1,1 @@
-To store JS files that I use to practice for future reference.
+To store files that I use to practice for future reference.
