@@ -316,4 +316,4 @@ function rgb(r, g, b){
     return hexArr.join('');
 }
 
-console.log(rgb(-20, 0, 330));
+console.log(rgb(86, 14, 2));
