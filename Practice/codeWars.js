@@ -291,29 +291,45 @@
 
 
 
-function rgb(r, g, b){
-    const decArr = [r, g, b];
-    const hex = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
-    let hexArr = [];
-    for(let i = 0; i < decArr.length; i++) {
-        let hexValue, dec, remainder, divisor;
-        dec = decArr[i];
+// function rgb(r, g, b){
+//     const decArr = [r, g, b];
+//     const hex = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
+//     let hexArr = [];
+//     for(let i = 0; i < decArr.length; i++) {
+//         let hexValue, dec, remainder, divisor;
+//         dec = decArr[i];
         
-        if (dec < 0) {
-            dec = 0;
-        } else if (dec > 255) {
-            dec = 255;
-        };
+//         if (dec < 0) {
+//             dec = 0;
+//         } else if (dec > 255) {
+//             dec = 255;
+//         };
 
-        divisor = Math.floor(dec / 16);
-        remainder = Math.floor(dec % 16);
+//         divisor = Math.floor(dec / 16);
+//         remainder = Math.floor(dec % 16);
 
-        hexValue = hex[divisor] + hex[remainder];
+//         hexValue = hex[divisor] + hex[remainder];
 
-        hexArr.push(hexValue);
+//         hexArr.push(hexValue);
+//     };
+
+//     return hexArr.join('');
+// }
+
+// console.log(rgb(86, 14, 2));
+
+
+
+function firstNonRepeatingLetter(s) {
+    let lowerCaseArray = s.toLowerCase().split('').sort()
+    let countArray = [];
+    let count = 0
+
+    for (let i = 0; i < lowerCaseArray.length; i++) {
+        
     };
 
-    return hexArr.join('');
-}
+    return countArray;
+};
 
-console.log(rgb(86, 14, 2));
+console.log(firstNonRepeatingLetter('sTress'))
