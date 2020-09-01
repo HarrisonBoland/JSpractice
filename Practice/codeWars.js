@@ -1,7 +1,7 @@
 // function solution(number){
 //     const romanNumerals = ['I', 'V', 'X', 'L', 'C', 'D', 'M'];
 //     let result = '';
-    
+
 //     let  pos0, pos1, pos2, numString;
 //     numString = number.toString();
 //     pos0 = 0;
@@ -45,8 +45,6 @@
 
 // console.log(solution(101));
 
-
-
 // function isPrime(num) {
 //     const root = Math.sqrt(num);
 //     if (num >= 2) {
@@ -63,8 +61,6 @@
 
 // console.log(isPrime(-5))
 
-
-
 // function narcissistic(value) {
 //     const valueArr =  value.toString().split('');
 //     let result = 0;
@@ -75,8 +71,6 @@
 // };
 
 // console.log(narcissistic(153));
-
-
 
 // function sortArray(array) {
 //     // Split array into odd numbers and save positions of even numbers
@@ -91,7 +85,7 @@
 //             neg.push(array[i]);
 //         };
 //     };
-    
+
 //     // Sort negative array accending
 //     neg.sort((a,b)=>a-b);
 
@@ -112,8 +106,6 @@
 
 // console.log(sortArray([5, 3, 2, 8, 1, 4]));
 
-
-
 // COULDN"T DO
 // function zero() {}
 // function one() {}
@@ -130,9 +122,6 @@
 // function minus() {}
 // function times() {}
 // function dividedBy() {}
-
-
-
 
 // function toWeirdCase(string){
 //     newString = ''
@@ -156,8 +145,6 @@
 
 // console.log(toWeirdCase('hi Man how is it going'));
 
-
-
 // function wave(str) {
 //     arr = [];
 //     for (let i = 0; i < str.length; i++) {
@@ -172,8 +159,6 @@
 // }
 
 // console.log(wave('hello buddy'))
-
-
 
 // function pigIt(str){
 //     strArr = str.split(' ');
@@ -195,8 +180,6 @@
 
 // console.log(pigIt('Hello World ?'));
 
-
-
 // var moveZeros = function (arr) {
 //     let newArr = [];
 //     for (let i = arr.length - 1; i >= 0; i--) {
@@ -211,8 +194,6 @@
 // }
 
 // console.log(moveZeros([false,1,0,1,2,0,1,3,"a"]));
-
-
 
 // function generateHashtag (str) {
 //     const strArr = str.split(' ');
@@ -236,8 +217,6 @@
 
 // console.log(generateHashtag(''))
 
-
-
 // function humanReadable(seconds) {
 //     let time = ['00','00','00'];
 //     time[2] = seconds % 60;
@@ -252,8 +231,6 @@
 //   }
 
 //   console.log(humanReadable(86349))
-
-
 
 // function josephus(items, k){
 //     k -= 1
@@ -274,22 +251,18 @@
 //                 count++
 //             }
 //         }
-        
+
 //         console.log(items , count, items[count]);
 //     };
 //   }
 
 // console.log(josephus([1,2,3,4,5,6,7,8,9,10],2));
 
-
-
 // function loop_size(node){
 //     // LEARN HOW TO WRITE A LINKED LIST
 // }
 
 // console.log(loop_size())
-
-
 
 // function rgb(r, g, b){
 //     const decArr = [r, g, b];
@@ -298,7 +271,7 @@
 //     for(let i = 0; i < decArr.length; i++) {
 //         let hexValue, dec, remainder, divisor;
 //         dec = decArr[i];
-        
+
 //         if (dec < 0) {
 //             dec = 0;
 //         } else if (dec > 255) {
@@ -318,18 +291,90 @@
 
 // console.log(rgb(86, 14, 2));
 
+// function firstNonRepeatingLetter(s) {
+//     let lowerCaseArray = s.toLowerCase().split('').sort()
+//     let countArray = [];
+//     let count = 0
 
+//     for (let i = 0; i < lowerCaseArray.length; i++) {
 
-function firstNonRepeatingLetter(s) {
-    let lowerCaseArray = s.toLowerCase().split('').sort()
-    let countArray = [];
-    let count = 0
+//     };
 
-    for (let i = 0; i < lowerCaseArray.length; i++) {
-        
-    };
+//     return countArray;
+// };
 
-    return countArray;
-};
+// console.log(firstNonRepeatingLetter('sTress'))
 
-console.log(firstNonRepeatingLetter('sTress'))
+// function domainName(url) {
+//   let urlArr = url.split(/[./:]/);
+
+// 	if (urlArr[0] === 'http') {
+// 		urlArr.splice(urlArr.indexOf('http'), 1);
+// 	} else if (urlArr[0] === 'https') {
+// 		urlArr.splice(urlArr.indexOf('https'), 1);
+// 	}
+//   urlArr.splice(urlArr.indexOf('www'), 1);
+
+//   let results = [];
+//   for (let i = 0; i < urlArr.length; i++) {
+//     if (urlArr[i] !== '') {
+//       results.push(urlArr[i]);
+//     }
+//   }
+
+//   return results[0];
+// }
+
+// console.log(domainName('https://google.com'));
+
+// function pickPeaks(arr) {
+//   let peaksObj = {
+//     pos: [],
+//     peaks: [],
+//   };
+
+// 	let prevNode = 0;
+// 	let highNode = 0;
+// 	let highNodePos = 0
+//   for (let i = 0; i < arr.length; i++) {
+//     prevNode = arr[i - 1];
+//     if (i === 0) {
+//       prevNode = arr[i];
+//     } 
+
+// 		if (arr[i] > prevNode) {
+// 			highNode = arr[i]
+// 			highNodePos = i
+// 		}
+
+//     if (arr[i] < highNode) {
+//       peaksObj.pos.push(highNodePos);
+// 			peaksObj.peaks.push(arr[highNodePos]);
+// 			highNode = 0
+// 			highNodePos = 0
+// 		}
+// 		//console.log(i, highNode, prevNode)
+//   }
+
+//   return peaksObj;
+// }
+
+// console.log(pickPeaks([1, 2, 3, 6, 4, 1, 2, 3, 2, 1]));
+// console.log(pickPeaks([3,2,3,6,4,1,2,3,2,1,2,2,2,1]));
+// THE ANSWER
+// function pickPeaks(arr){
+//   var result = {pos: [], peaks: []};
+//   if(arr.length > 2) {
+//     var pos = -1;
+//     for(var i=1; i<arr.length;i++){
+//       if(arr[i] > arr[i-1]) {
+//         pos = i;
+//       } else if(arr[i] < arr[i-1] && pos != -1) {
+//         result.pos.push(pos);
+//         result.peaks.push(arr[pos]);
+//         pos = -1;
+//       }
+//     }
+//   }
+//   return result;
+// }
