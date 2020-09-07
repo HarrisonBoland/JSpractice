@@ -340,7 +340,7 @@
 //     prevNode = arr[i - 1];
 //     if (i === 0) {
 //       prevNode = arr[i];
-//     } 
+//     }
 
 // 		if (arr[i] > prevNode) {
 // 			highNode = arr[i]
@@ -378,3 +378,65 @@
 //   }
 //   return result;
 // }
+
+// var isPP = function (n) {
+//   let PPArr = [];
+//   let m = 1;
+//   let k = 2;
+//   let value = 0;
+
+//   while (k <= n / 2) {
+//     while (value <= n) {
+//       value = Math.pow(m, k);
+//       if (value === n) {
+//         PPArr.push(m, k);
+//       }
+
+//       m++;
+//     }
+
+//     value = 0;
+//     m = 1;
+//     k++;
+//   }
+
+//   if (PPArr.length === 0) {
+//     return null;
+//   } else {
+//     return PPArr;
+//   }
+// };
+
+// console.log(isPP(81));
+
+// function productFib(prod) {
+//   let fn0 = 0;
+//   let fn1 = 1;
+//   while (fn0 * fn1 <= prod) {
+//     if (fn0 * fn1 === prod) {
+//       return [fn0, fn1, true];
+//     }
+//     let test = fn1;
+//     fn1 += fn0;
+//     fn0 = test;
+//   }
+
+//   return [fn0, fn1, false];
+// }
+
+// console.log(productFib(74049690));
+
+// COME BACK TO POTIENTIALLY
+// function convertFrac(lst) {
+//   const newList = lst.split(',')
+//   domArr = []
+//   for (let i = 0; i < newList.length; i ++) {
+    
+//     if (i % 2 === 1) {
+//       domArr.push(newList[i])
+//     }
+//   }
+//   return newList
+// }
+
+// console.log(convertFrac('1,2,1,3,1,4,1,5'));
