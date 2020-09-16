@@ -36,7 +36,15 @@ document.querySelector('.todo-submit').addEventListener('click', () => {
   }
 });
 
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
 document.querySelector('.check').addEventListener('click', () => {
-  let removeButton = document.getElementsByClassName('remove-button');
-  console.log(removeButton)
+  let checked = document.getElementsByClassName('checked');
+  for (let i = 0; i < checked.length; i ++) {
+    checked[i].style.display = 'none'
+  }
 })
