@@ -19,14 +19,14 @@
 //     'fifteen',
 //     'sixteen',
 //     'seventeen',
-//     'eightteen',
+//     'eighteen',
 //     'nineteen',
 //   ];
 
 //   const numberArrHigh = [
 //     'twenty',
 //     'thirty',
-//     'fourty',
+//     'forty',
 //     'fifty',
 //     'sixty',
 //     'seventy',
@@ -55,29 +55,38 @@
 //       // console.log(sortingArr[i]);
 //     } else if (100 <= ary[i] && ary[i] < 1000) {
 //       let digitLow = parseInt(ary[i].toString().split('')[2]);
-//       let digitMid = parseInt(ary[i].toString().split('')[1]) - 2;
+//       let digitMid = parseInt(ary[i].toString().split('')[1]);
 //       let digitHigh = parseInt(ary[i].toString().split('')[0]);
+//       console.log(digitMid)
 
+        // This needs to be fixed
 //       if (digitLow === 0) {
 //         sortingArr.push([
-//           numberArrLow[digitHigh] + ' hundred ' + numberArrHigh[digitMid],
+//           numberArrLow[digitHigh] + ' hundred ' + numberArrHigh[digitMid - 2],
+//           ary[i],
+//         ]);
+//       } else if (digitMid === 1) {
+//         sortingArr.push([
+//           numberArrLow[digitHigh] +
+//             ' hundred and ' +
+//             numberArrLow[digitlow + 10],
 //           ary[i],
 //         ]);
 //       } else {
 //         sortingArr.push([
 //           numberArrLow[digitHigh] +
 //             ' hundred and ' +
-//             numberArrHigh[digitMid] +
+//             numberArrHigh[digitMid - 2] +
 //             ' ' +
 //             numberArrLow[digitLow],
 //           ary[i],
 //         ]);
 //       }
-//       // console.log(sortingArr[i]);
+//       console.log(sortingArr[i]);
 //     }
 //   }
 
-//   sortingArr.sort((a, b) => (a[0] >= b[0] ? 1 : -1));
+//   sortingArr.sort((a, b) => a[0].localeCompare(b[0]));
 
 //   let result = sortingArr.map((el) => {
 //     return el[1];
