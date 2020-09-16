@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: teal;
+  text-align: center;
+  position: relative;
+  padding: 20px;
+}
+
+.title {
+  font-size: 40px;
+  color: white;
+  padding-bottom: 10px;
+}
+
+.todo-container {
+  text-align: center;
+}
+
+.todo-list {
+  padding: 10px;
+  list-style-type: none;
+  font-size: 20px;
+}
