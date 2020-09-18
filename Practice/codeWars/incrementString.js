@@ -18,9 +18,9 @@ function incrementString (strng) {
 
   // checks the length of the number with zeros vs without + 1 and adds zeros accordingly
   if (numberArr) {
-    numArrLength = numberArr.length
-    num = parseInt(numberArr.join('')) + 1
-    numLength = num.toString().split('').length
+    const numArrLength = numberArr.length
+    const num = parseInt(numberArr.join('')) + 1
+    const numLength = num.toString().split('').length
     if (numLength > numArrLength) {
       word += num
     } else {
@@ -34,7 +34,9 @@ function incrementString (strng) {
   return word
 }
 
-console.log(incrementString("1"))
+console.log(incrementString("foobar0099"))
+
+// Best Answer
 
 // /(^9+$)/ 
 // regex3.test(numberArr.join(''))
