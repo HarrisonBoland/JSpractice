@@ -28,13 +28,26 @@ document.querySelector('.todo-submit').addEventListener('click', () => {
   document.querySelector('.todo-input').value = '';
 
   // delete list item
-  for (let i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
+  // for (let i = 0; i < close.length; i++) {
+  //   close[i].onclick = function() {
+  //     var div = this.parentElement;
+  //     div.style.display = "none";
+  //   }
+  // }
 });
+
+//Delete Item try 2 with even bubbling
+document.querySelector('.todo-list').addEventListener('click', (event) => {
+  console.log(event.target.className)
+  if (event.target.className === 'remove-button') {
+    //event.target.style.display = 'none'
+    let remove = event.target.parentNode
+    console.log(remove)
+    let parentNode = remove.parentNode
+    console.log(parentNode)
+    parentNode.removeChild(remove)
+  }
+})
 
 list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
