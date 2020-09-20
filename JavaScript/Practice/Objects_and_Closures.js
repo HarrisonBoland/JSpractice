@@ -16,7 +16,7 @@
 
 // john.calculateAge()
 
-//Class functions
+//first Class functions
 // const years = [1990, 1965, 1937, 2005, 1998];
 
 // function arrayCalc(arr, fn) {
@@ -119,30 +119,77 @@
 // johnFriendly('night')
 
 //CODING CHALLENGE
-function Question(question, answers, correct) {
-  this.question = question;
-  this.answers = answers;
-  this.correct = correct
-}
+// function Question(question, answers, correct) {
+//   this.question = question;
+//   this.answers = answers;
+//   this.correct = correct
+// }
 
-const question = ['whats my name?', 'how old am I?', 'am I cool?'];
-const answers = {
-  0: ['harrison', 'max', 'tom'],
-  1: ['23', '22', '21'],
-  2: ['very cool', 'lame']
-}
-const correct = [0, 1, 0]
-let random = Math.floor(Math.random() * 3)
+// const question = ['whats my name?', 'how old am I?', 'am I cool?'];
+// const answers = {
+//   0: ['harrison', 'max', 'tom'],
+//   1: ['23', '22', '21'],
+//   2: ['very cool', 'lame']
+// }
+// const correct = [0, 1, 0]
+// let random = Math.floor(Math.random() * 3)
 
-Question.prototype.displayResult = function() {
-  this.answers.forEach((el, i) => console.log(i + ': ' + el))
-  let userAnswer = prompt(this.question)
-  if (userAnswer == this.correct) {
-    console.log('Correct!')
-  } else {
-    console.log('Wrong!')
-  }
-}
+// Question.prototype.displayResult = function() {
+//   this.answers.forEach((el, i) => console.log(i + ': ' + el))
+//   let userAnswer = prompt(this.question)
+//   if (userAnswer == this.correct) {
+//     console.log('Correct!')
+//   } else {
+//     console.log('Wrong!')
+//   }
+// }
 
-const display = new Question(question[random], answers[random], correct[random])
-display.displayResult();
+// const display = new Question(question[random], answers[random], correct[random])
+// display.displayResult();
+
+//CODING CHALLENGE 2
+// class Town {
+//   constructor(name, buildYear) {
+//     this.name = name;
+//     this.buildYear = buildYear;
+//   }
+// }
+
+// class Park extends Town {
+//   constructor(name, buildYear, numOfTrees, parkArea) {
+//     super(name, buildYear);
+//     this.numOfTrees = numOfTrees;
+//     this.parkArea = parkArea;
+//   }
+
+//   treeDensity() {
+//     return this.numOfTrees / this.parkArea;
+//   }
+
+//   calculateAge() {
+//     return 2020 - this.buildYear;
+//   }
+// }
+
+// class Street extends Town {
+//   constructor(name, buildYear, lengthOfStreet, sizeOfStreet = 'normal') {
+//     super(name, buildYear);
+//     this.lengthOfStreet = lengthOfStreet;
+//     this.sizeOfStreet = sizeOfStreet;
+//   }
+// }
+
+// const greenPark = new Park('Green Park', 1990, 500, 30);
+// const nationalPark = new Park('National Park', 1990, 1300, 40);
+// const oakPark = new Park('Oak Park', 1990, 700, 100);
+// const parkArr = [greenPark, nationalPark, oakPark]
+
+// console.log('-----PARKS REPORT-----')
+// let age = 0
+// for (i in parkArr) {
+//   age += parkArr[i].calculateAge()
+// }
+// console.log(`Our 3 parks have an average age of ${age / 3} years`)
+
+
+// console.log('-----STREETS REPORT-----')
