@@ -193,3 +193,15 @@
 
 
 // console.log('-----STREETS REPORT-----')
+
+//MAP, FILTER, REDUCE
+const arr = [1,2,3,4,5]
+
+let mapArr = arr.map(el => el + 2)
+console.log(mapArr)
+
+let filterArr = arr.filter(el => el % 2 === 1)
+console.log(filterArr)
+
+let reduceArr = arr.reduce((acc, cur) => acc + cur, 0)
+console.log(reduceArr)
