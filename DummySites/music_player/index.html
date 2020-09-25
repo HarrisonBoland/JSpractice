@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="title">Music Player</div>
+    <button class="button play" onclick="play()">Play</button>
+    <button class="button stop" onclick="stop()">Stop</button>
+    <div class="song-playing">No song is playing</div>
+  </header>
+
+  <div class="song-container">
+    <label for="music">Choose a Song:</label>
+    <select name="music" id="music" onchange="select()">
+      <option value="ScarTissue">Scar Tissue</option>
+      <option value="WarmThoughts">Warm Thoughts</option>
+    </select>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

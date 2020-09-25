@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.header {
+  height: 150px;
+  width: 100%;
+  background-color: teal;
+  font-size: 30px;
+}
+
+.title {
+  padding: 10px;
+}
+
+.song-playing {
+  padding: 10px;
+}
+
+.button {
+  padding: 5px;
+}
+
+.play {
+  background-color: green;
+}
+
+.stop {
+  background-color: red;
+}
+
+.song-container {
+  padding: 20px;
+}
