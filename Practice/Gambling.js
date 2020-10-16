@@ -1,5 +1,5 @@
 // ##########################################
-const runAmount = 1000; // YOU CAN CHANGE THIS
+const runAmount = 100; // YOU CAN CHANGE THIS
 // ##########################################
 
 function GamblingGen() {
