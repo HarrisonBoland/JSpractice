@@ -1,10 +1,17 @@
 // ##########################################
-const runAmount = 100; // YOU CAN CHANGE THIS
+// MAKE MONEY GAMBLING
+// WALK IN WITH $1800
+// AND YOU HAVE ABOUT 98% CHANCE OF WINNING
+// $500
+// #########################################
+
+// ##########################################
+const runAmount = 1000; // YOU CAN CHANGE THIS
 // ##########################################
 
 function GamblingGen() {
   // #################################
-  let pot = 600; // YOU CAN CHANGE THIS
+  let pot = 1; // YOU CAN CHANGE THIS
   // #################################
 
   // Code that calculates percentage change of winning and amount made

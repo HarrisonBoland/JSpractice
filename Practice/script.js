@@ -1,22 +1,18 @@
 // console.log('Hello World!')
 
-
-
 // function ensure(value) {
 //     if(value === undefined) {
 //       throw new Error('no arguments');
 //     }
-  
+
 //     return value;
 //   }
-  
+
 //   try {
 //     console.log(ensure());
 //   } catch(err) {
 //     console.log(err);
 //   }
-
-
 
 // function removeProperty(obj, prop) {
 //     keys = []
@@ -29,8 +25,6 @@
 //     return false
 //   }
 
-
-
 // function formatDate(userDate) {
 //     // format from M/D/YYYY to YYYYMMDD
 //     let arr = userDate.split('/')
@@ -42,10 +36,8 @@
 //     }
 //     return `${arr[2]}${arr[0]}${arr[1]}`
 //   }
-  
+
 //   console.log(formatDate("12/31/2014"));
-
-
 
 // function setup() {
 //     let btnRemove = document.querySelectorAll('.remove')
@@ -58,8 +50,6 @@
 // }
 
 // setup();
-
-
 
 // function createCheckDigit(membershipId) {
 //     if (membershipId.length === 1) {
@@ -75,10 +65,8 @@
 //         return createCheckDigit(result.toString());
 //     }
 // }
-  
+
 // console.log(createCheckDigit("55555"));
-
-
 
 // function registerHandlers() {
 //     var as = document.getElementsByTagName('a');
@@ -92,19 +80,15 @@
 //     }
 // }
 
-
-
 // function appendChildren(decorateDivFunction) {
 //     var allDivs = document.getElementsByTagName("div");
-  
+
 //     for (var i = 0; i < allDivs.length; i++) {
 //         var newDiv = document.createElement("div");
 //         decorateDivFunction(newDiv);
 //         allDivs[i].appendChild(newDiv);
 //     }
 // }
-
-
 
 // function showCustomers(customers, targetList) {
 //     for (let i = 0; i < customers.length; i++) {
@@ -114,9 +98,9 @@
 //         name.innerHTML = customers[i].name
 //         let email = document.createElement('p');
 //         email.innerHTML = customers[i].email
-        
+
 //         li.appendChild(name)
-        
+
 //         name.addEventListener('click', function() {
 //             if (li.contains(email)) {
 //                 li.remove(email)
@@ -128,7 +112,7 @@
 //         targetList.appendChild(li);
 //     }
 //   }
-  
+
 //   document.body.innerHTML = `
 //   <div>
 //     <ul id="customers">
@@ -138,7 +122,7 @@
 //   let customers = [{name: "John", email: "john@example.com"},
 //                    {name: "Mary", email: "mary@example.com"}];
 //   showCustomers(customers, document.getElementById("customers"));
-  
+
 //   let customerParagraph = document.querySelectorAll("li > p")[0];
 //   if(customerParagraph) {
 //     customerParagraph.click();
@@ -168,7 +152,7 @@
 // main();
 
 // function calculate_coffee_stats(office_stats_list) {
-//     // 
+//     //
 //     console.log(office_stats_list)
 //     let = arr = []
 //     for (let i = 0; i < office_stats_list.length; i++) {
@@ -193,8 +177,6 @@
 // list = ['office1,jan,500','office1,feb,30','office1,jan,400','office2,jan,300','office2,jan,30','office2,jan,57']
 // calculate_coffee_stats(list)
 
-
-
 // function calculate_profit(revenue_and_cost_stats, exchange_rates) {
 //     const costStats = revenue_and_cost_stats.split(',');
 //     let exchangeRates = []
@@ -207,7 +189,7 @@
 //     console.log(costStats);
 //     for (let i = 0; i < exchangeRates.length; i++) {
 //         if (exchangeRates[i] === costStats[4]) {
-            
+
 //         }
 //     }
 // }
@@ -215,5 +197,14 @@
 // calculate_profit('2019-03-20T22:32:04+13:00,40345.23,NZD,23983.23,AUD', ['AUD,2019-03-31,1.063103',
 // 'AUD,2019-04-01,1.042530'])
 
-
-
+var num = 4;
+function outer() {
+  var num = 2;
+  function inner() {
+    num++;
+    var num = 3;
+    console.log(num);
+  }
+  inner();
+}
+outer();
