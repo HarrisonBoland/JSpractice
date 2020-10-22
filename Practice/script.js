@@ -197,14 +197,14 @@
 // calculate_profit('2019-03-20T22:32:04+13:00,40345.23,NZD,23983.23,AUD', ['AUD,2019-03-31,1.063103',
 // 'AUD,2019-04-01,1.042530'])
 
-var num = 4;
-function outer() {
-  var num = 2;
-  function inner() {
-    num++;
-    var num = 3;
-    console.log(num);
-  }
-  inner();
-}
-outer();
+// var num = 4;
+// function outer() {
+//   var num = 2;
+//   function inner() {
+//     num++;
+//     var num = 3;
+//     console.log(num);
+//   }
+//   inner();
+// }
+// outer();
